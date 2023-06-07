@@ -1,0 +1,43 @@
+<div class="container mt-4 mb-5 pb-5">
+  <div class="card">
+
+    <div class="card-body">
+      <h3 class="d-flex justify-content-center"> Add Money to Card</h3>
+      <form [formGroup]="moneyForm" (ngSubmit)="addMoney()" class="container mt-4">
+        <div class="form-group">
+          <label for="cardHolderName">Card Holder's Name</label>
+          <input type="text" id="cardHolderName" formControlName="cardHolderName" class="form-control" readonly>
+        </div>
+        <div class="form-group">
+          <label for="cardNumber">Card Number</label>
+          <span class="form-control">{{ actualCardNumber | maskCardNumber }}</span>
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" formControlName="amount" class="form-control" required>
+        </div>
+        <div class="row mb-3">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="expire">Expiry Date</label>
+              <input type="text" id="expire" formControlName="expire" class="form-control" placeholder="MM/YYYY" required>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input type="password" id="cvv" formControlName="cvv" class="form-control" placeholder="CVV" required>
+            </div>
+          </div>
+        </div>
+        <button *ngIf="!enableTPIN" class="btn btn-grey btn-block" [disabled]="moneyForm.invalid" (click)="addMoney()">Add Money</button>
+      </form>
+      <div *ngIf="enableTPIN">
+        <label for="tpin">Enter TPIN:</label>
+        <input type="number" id="tpin" [(ngModel)]="tpin" required>
+        <br>
+        <button class="btn btn-info  btn-grey btn-block" (click)="moneyAdded()">Add Money</button>
+      </div>
+    </div>
+  </div>
+</div>

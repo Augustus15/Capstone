@@ -1,0 +1,23 @@
+<div class = "container">
+  <table class="table table-greyish">
+    <thead>
+      <tr>
+        <th> TransactionId</th>
+        <th> CardNumber </th>
+        <th> Receiver </th>
+        <th> Date </th>
+        <th>Amount</th>
+        <th>Type</th>
+        <th>Balance</th>
+        </tr>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{transaction.transactionId}}</td>
+          <td>{{transaction.cardNumber}}</td>
+          <td>{{transaction.receiver}}</td>
+          <td>{{transaction.transactionDate}}</td>
+          <td>{{transaction.amount}}</td>
+          <td>{{transaction.transactionType}}</td>
+          <td>{{transaction.cardBalance}}</td>
+        </tr>
+    </thead>
+    <tbody>

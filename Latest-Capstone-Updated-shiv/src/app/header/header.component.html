@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a routerLink="dashboard"><img src="../../assets/image/image.png" width="70" height="50" alt=""></a>
+          &nbsp;
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="transaction" aria-current="page"><i class="bi bi-house-fill" style="font-size:larger">Transactions</i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="products"><i class="bi bi-house-fill" style="font-size:larger">Products & Services </i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="addMoney"><i class="bi bi-house-fill" style="font-size:larger">Add Money</i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="profile"><i class="bi bi-house-fill" style="font-size:larger">Profile</i></a>
+        </li>
+      </ul>
+      <form class="d-flex" role="logout">
+        <div style="display: flex;" >
+        <a routerLink="logout" class="navbar-brand ml-auto log_out"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>

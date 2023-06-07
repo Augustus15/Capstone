@@ -1,0 +1,13 @@
+<div class="login-container">
+  <div class="login-form">
+    <h2>Login</h2>
+    <form>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="Enter Phone Number" [(ngModel)]="phoneNumber" min="10" max="15">
+      </div>
+      <button class="btn btn-primary btn-block" (click)="getOTP()">Get OTP</button>
+    </form>
+    <div id="sign-in-button"></div>
+  </div>
+</div>
