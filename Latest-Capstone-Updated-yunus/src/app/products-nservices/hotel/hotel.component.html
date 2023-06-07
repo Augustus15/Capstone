@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <!-- Dropdown code here -->
+      <div class="form-group mr-2 d-flex justify-content-between pl-1 pr-1">
+        <!-- ... -->
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-6" *ngFor="let product of selectedArray">
+          <mat-card class="card">
+            <div class="card-image">
+              <img [src]="product.imageUrl" alt="Hotel Image">
+            </div>
+            <mat-card-content class="card-content">
+              <h5 class="card-title">{{ product.name }}</h5>
+              <p class="card-text">Description: {{ product.description }}</p>
+              <p class="card-text"> Price: {{ product.price }} &#x20B9;</p>
+
+              <button class="btn btn-primary">Pay</button>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <br>
+
+    </div>
+  </div>
+</div>

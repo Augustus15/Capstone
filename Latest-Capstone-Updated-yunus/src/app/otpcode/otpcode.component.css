@@ -1,0 +1,10 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../../assets/bgimg.jpg'); /* Replace with the path to your JPEG image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
