@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { UserDataService } from './services/user-data.service';
 import { SharedService } from './services/shared.service';
 
@@ -41,7 +41,7 @@ getUserInfoByLogin() {
   this.userService.getUserData().subscribe(
     data => {
       this.loggedInUser = data.find((a) => a.email === emailValue);
-      this.cardMoney = this.loggedInUser?.travelCard.cardBalance
+      this.cardMoney = this.loggedInUser?.travelCard?.cardBalance
     }
   );
 }

@@ -10,6 +10,7 @@ export class User{
     ifsc:string=''
     mobileNumber:string=''
     email:string=''
+    tpin:number=0
     address:Address={
       line1: "",
       city: "",

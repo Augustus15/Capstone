@@ -53,7 +53,7 @@ export class AddmoneyComponent implements OnInit{
 
   moneyAdded()
   {
-    if(this.tpin === this.loggedInUser?.mobileNumber)
+    if(this.tpin === String(this.loggedInUser?.tpin))
     {
       let t = new Transaction();
       t.amount =this.moneyForm.value.amount
@@ -67,10 +67,10 @@ export class AddmoneyComponent implements OnInit{
         {
 
           alert('Money added Successfully!')
-
+          localStorage.setItem('amount',(this.loggedInUser?.travelCard.cardBalance + this.moneyForm.value.amount));
+          window.location.reload();
         }
       )
-      localStorage.setItem('amount',(this.loggedInUser?.travelCard.cardBalance + this.moneyForm.value.amount));
 
 
     }

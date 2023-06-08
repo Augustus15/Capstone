@@ -10,14 +10,14 @@
         <div class="col-md-6" *ngFor="let product of selectedArray">
           <mat-card class="card">
             <div class="card-image">
-              <img [src]="product.imageUrl" alt="Hotel Image">
+              <img width="500px" height="400px" [src]="product.imageUrl" alt="Hotel Image">
             </div>
             <mat-card-content class="card-content">
               <h5 class="card-title">{{ product.name }}</h5>
               <p class="card-text">Description: {{ product.description }}</p>
-              <p class="card-text"> Price: {{ product.price }} &#x20B9;</p>
+              <p class="card-text"> Price: &#x20B9;{{ product.price }} for {{product.headCount}} person(s) </p>
 
-              <button class="btn btn-primary">Pay</button>
+              <button (click)="payMoney(product)" class="btn btn-primary">Pay</button>
             </mat-card-content>
           </mat-card>
         </div>

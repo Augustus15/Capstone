@@ -26,6 +26,8 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { ProductsNservicesComponent } from './products-nservices/products-nservices.component';
 import { HotelComponent } from './products-nservices/hotel/hotel.component';
 import { MaskCardNumberPipe } from './pipes/mask-card-number.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { PaymoneyComponent } from './products-nservices/hotel/paymoney/paymoney.component';
 
 
 
@@ -46,7 +48,8 @@ import { MaskCardNumberPipe } from './pipes/mask-card-number.pipe';
     ErrorpageComponent,
     ProductsNservicesComponent,
     HotelComponent,
-    MaskCardNumberPipe
+    MaskCardNumberPipe,
+    PaymoneyComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseconfig),
@@ -58,7 +61,8 @@ import { MaskCardNumberPipe } from './pipes/mask-card-number.pipe';
     BrowserAnimationsModule,
     AngularFireAuthModule,
     NgOtpInputModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

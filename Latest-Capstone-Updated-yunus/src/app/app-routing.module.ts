@@ -12,6 +12,7 @@ import {ProductsNservicesComponent} from './products-nservices/products-nservice
 import { HomeComponent } from './home/home.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { HotelComponent } from './products-nservices/hotel/hotel.component';
+import { PaymoneyComponent } from './products-nservices/hotel/paymoney/paymoney.component';
 
 // Create a custom route guard to check if the user is logged in
 @Injectable()
@@ -38,8 +39,10 @@ const routes: Routes = [
   { path: 'addMoney', component: AddmoneyComponent, canActivate: [AuthGuard] },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
    { path: 'error', component: ErrorpageComponent },
-   { path: 'logout', component: LoginformComponent },
-   {path:'hotel', component:HotelComponent},
+   { path: 'logout', component: LoginformComponent, canActivate: [AuthGuard] },
+   { path: 'receipt', component: PaymoneyComponent , canActivate: [AuthGuard] },
+
+   {path:'Buy', component:HotelComponent},
 
    {path:'products', component:ProductsNservicesComponent},
 

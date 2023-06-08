@@ -33,7 +33,7 @@
   </form>
   <div *ngIf="enableTPIN">
   <label for="tpin">Enter TPIN:</label>
-  <input text="number" id="tpin" [(ngModel)]="tpin" required>
+  <input maxlength="4" type="password" id="tpin" [(ngModel)]="tpin" required>
   <br>
   <button  class="btn btn-info btn-block" (click)="moneyAdded()"  >Add Money</button>
 </div>

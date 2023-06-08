@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsNservicesComponent } from '../products-nservices.component';
 import { Products } from 'src/app/models/products.model';
 import { TransactionDataService } from 'src/app/services/transaction-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hotel',
@@ -12,8 +13,9 @@ export class HotelComponent {
 
 selectedArray:Products[]=[]
 
+static addedProduct:Products;
  showDataOf='';
- constructor(private productsDataService: TransactionDataService)
+ constructor(private productsDataService: TransactionDataService, private router:Router)
  {}
   ngOnInit()
   {
@@ -30,6 +32,14 @@ selectedArray:Products[]=[]
     }
 
   }
+
+  payMoney(product:Products)
+  {
+    HotelComponent.addedProduct = product;
+    this.router.navigate(['receipt'])
+
+  }
+
   getAllData()
   {
     const regs = localStorage.getItem('region')

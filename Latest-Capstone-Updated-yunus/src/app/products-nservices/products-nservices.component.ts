@@ -18,8 +18,8 @@ export class ProductsNservicesComponent {
 
   countries: string[] = ['Iceland', 'USA', 'UK']; // Example country list
   regions: { [key: string]: string[] } = {
-    'Iceland': ['Westjford', 'Reykjavík', 'Reykjanes'],
-    'USA': ['New Jersey', 'Texas', 'California'],
+    'Iceland': ['Westjfords', 'Reykjavik', 'Reykjanes'],
+    'USA': ['New jersey', 'Texas', 'California'],
     'UK': ['Leeds', 'London', 'Sheffield']
   }; // Example states based on country
 
@@ -61,7 +61,7 @@ export class ProductsNservicesComponent {
 
 
     if (this.selectedRegions!=null && this.selectedCategory!=null && this.selectedRegions.length!=0) {
-     const redirectUrl = `/hotel`;
+     const redirectUrl = `/Buy`;
      localStorage.setItem('optionSelected',this.abc);
      console.log(redirectUrl);
       this.router.navigate([redirectUrl]);

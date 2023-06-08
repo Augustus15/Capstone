@@ -19,6 +19,10 @@ export class TransactionDataService {
     return this._http.get<Products[]>(`http://192.168.1.110:2468/Services/${region}/${category}`)
   }
 
+  postTransaction(addTransact: Transaction,cardNumber:any)
+  {
+    return this._http.post<Transaction>(`http://192.168.1.110:9531/Transaction/NewTransaction/${cardNumber}`,addTransact)
+  }
   addMoney(cardNumber:number,amount:Transaction)
   {
     return this._http.put<Transaction>(`http://192.168.1.110:9531/Transaction/AddMoney/${cardNumber}`,amount);
