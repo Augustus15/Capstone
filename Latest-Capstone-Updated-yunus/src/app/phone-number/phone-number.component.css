@@ -1,9 +1,8 @@
 .login-container {
   display: flex;
   justify-content: center;
+  
   align-items: center;
-  height: 100vh;
-  background-image: url('../../assets/bgimg.jpg'); /* Replace with the path to your JPEG image */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -15,11 +14,7 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-
-
   }
-
-
 
 h2 {
   text-align: center;

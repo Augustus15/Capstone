@@ -18,7 +18,7 @@ export class ProductsNservicesComponent {
 
   countries: string[] = ['Iceland', 'USA', 'UK']; // Example country list
   regions: { [key: string]: string[] } = {
-    'Iceland': ['Westjfords', 'Reykjavik', 'Reykjanes'],
+    'Iceland': ['Westfjords', 'Reykjavik', 'Reykjanes'],
     'USA': ['New jersey', 'Texas', 'California'],
     'UK': ['Leeds', 'London', 'Sheffield']
   }; // Example states based on country

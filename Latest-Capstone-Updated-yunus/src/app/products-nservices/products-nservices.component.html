@@ -1,195 +1,54 @@
-
-<!--
-<div class="container mt-4">
-  <form [formGroup]="form">
-    <div class="form-group">
-      <label for="selectedCountry">Country:</label>
-      <select id="selectedCountry" formControlName="selectedCountry" class="form-control" (change)="onCountryChange()">
-        <option value="">Select a country</option>
-        <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="selectedState">State:</label>
-      <select id="selectedState" formControlName="selectedState" class="form-control">
-        <option value="">Select a state</option>
-        <option *ngFor="let state of states[form.get('selectedCountry')?.value]" [value]="state">{{ state }}</option>
-      </select>
-    </div>
-  </form>
-</div>
-
-
-
-
-<div class="container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-auto">
-      <form [formGroup]="form" class="form-inline">
-
-
-        <div class=" form-group mr-2 d-flex justify-content-between pl-1 pr-1">
-          <label for="selectedCountry">Country:</label>
-          <select id="selectedCountry" formControlName="selectedCountry" class="form-control form-control-sm" (change)="onCountryChange()">
-            <option value="">Select a country</option>
-            <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
-          </select>
-          <label for="selectedState">State:</label>
-          <select id="selectedState" formControlName="selectedState" class="form-control form-control-sm">
-            <option value="">Select a state</option>
-            <option *ngFor="let state of states[form.get('selectedCountry')?.value]" [value]="state">{{ state }}</option>
-          </select>
-        </div>
-      </form>
-    </div>
-  </div>
-  </div>
-
-  <div class="row mt-4">
-    <div class="col-md-3">
-      <mat-card class="card">
-        <a href="hotel-link">
-          <img mat-card-image src="\assets\image\hotel.jfif" alt="Hotel Image">
-        </a>
-        <mat-card-content>
-          <a href="hotel-link" class="card-link">
-            <mat-card-title>Hotels</mat-card-title>
-          </a>
-          <p class="card-text">Description of hotels</p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    <div class="col-md-3">
-      <mat-card class="card">
-        <a href="food-link">
-          <img mat-card-image src="\assets\image\food.jfif" alt="Food Image">
-        </a>
-        <mat-card-content>
-          <a href="food-link" class="card-link">
-            <mat-card-title>Food</mat-card-title>
-          </a>
-          <p class="card-text">Description of food</p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    <div class="col-md-3">
-      <mat-card class="card">
-        <a href="shopping-link">
-          <img mat-card-image src="\assets\image\shopping.jfif" alt="Shopping Image">
-        </a>
-        <mat-card-content>
-          <a href="shopping-link" class="card-link">
-            <mat-card-title>Shopping</mat-card-title>
-          </a>
-          <p class="card-text">Description of shopping</p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    <div class="col-md-3">
-      <mat-card class="card">
-        <a href="travel-link">
-          <img mat-card-image src="\assets\image\travel.jfif" alt="Travel Image">
-        </a>
-        <mat-card-content>
-          <a href="travel-link" class="card-link">
-            <mat-card-title>Travel</mat-card-title>
-          </a>
-          <p class="card-text">Description of travel</p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </div> -->
-  <div class="container-fluid">
+<div class="container test">
     <div class="row justify-content-center">
+      <h1 class="text-center pt-3 pb-2">Product and Services</h1>
       <div class="col-auto">
         <form [formGroup]="form" class="form-inline">
           <!-- Dropdown code here -->
-          <div class="form-group mr-2 d-flex justify-content-between pl-1 pr-1">
-            <label for="selectedCountry">Country:</label>
-            <select id="selectedCountry" formControlName="selectedCountry" class="form-control form-control-sm" (change)="onCountryChange()">
-              <option value="">Select a country</option>
-              <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
-            </select>
-            <label for="selectedRegions">Regions:</label>
-            <select id="selectedRegions" formControlName="selectedRegions" class="form-control form-control-sm">
-              <option value="">Select a Region</option>
-              <option *ngFor="let region of regions[form.get('selectedCountry')?.value]" [value]="region">{{ region }}</option>
-            </select>
+          <div class="form-group mr-2 d-flex justify-content-center dropdown-edit">
+            <div class="input-group mb-3  select-edit-1">
+              <label class="input-group-text" for="selectedCountry">Country</label>
+              <select class="form-control form-control-sm" id="selectedCountry" formControlName="selectedCountry" (change)="onCountryChange()">
+                <option value="" selected>Choose...</option>
+                <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+              </select>
+            </div>
+            <div class="input-group mb-3 select-edit-2">
+              <label class="input-group-text" for="selectedRegions">Region</label>
+              <select class="form-control form-control-sm" id="selectedRegions" formControlName="selectedRegions">
+                <option value="" selected>Choose...</option>
+                <option *ngFor="let region of regions[form.get('selectedCountry')?.value]" [value]="region">{{ region }}</option>
+              </select>
+            </div>
           </div>
-
-
         </form>
 
+        <div class="row d-flex justify-content-center">
+          <div class="card col-4">
+            <img src="../../assets/image/hotels.jpg" class="card-img img-height pt-2">
+            <div class="card-body">
+              <input type="radio" name="abc"  id="hotels" [(ngModel)]="abc" value="Hotel"><label for="hotels" class="label-font pl-2">Hotels</label>
+            </div>
+          </div>
 
-        <div class="row mt-4">
-          <div class="col-md-3">
-            <mat-card class="card">
-              <div class="card-image">
-                <img src="\assets\image\hotel.jfif" alt="Hotel Image">
-              </div><br>
-              <mat-card-content class="card-content" class="d-flex justify-content-center">
-                <div class="form-check">
-                  <input class="form-check-input" name="abc" type="radio"  [(ngModel)]="abc" value="Hotel" id="hotel">
-                  <label class="form-check-label" for="hotel">
-                    Hotel
-                  </label>
-                </div>
-              </mat-card-content>
-            </mat-card>
+          <div class="card col-4">
+            <img src="../../assets/image/foods.jpg" class="card-img img-height pt-2">
+            <div class="card-body">
+              <input type="radio" name="abc" id="foods" [(ngModel)]="abc" value="food"><label for="foods" class="label-font pl-2">Foods</label>
+            </div>
           </div>
-          <div class="col-md-3">
-            <mat-card class="card">
-              <div class="card-image">
-                <img src="\assets\image\food.jfif" alt="Food Image">
-              </div><br>
-              <mat-card-content class="card-content" class="d-flex justify-content-center">
-                <div class="form-check">
-                  <input class="form-check-input" name="abc" type="radio" [(ngModel)]="abc" value="food" id="food">
-                  <label class="form-check-label" for="food">
-                    Food
-                  </label>
-                </div>
-              </mat-card-content>
-            </mat-card>
-          </div>
-          <!-- <div class="col-md-3">
-            <mat-card class="card">
-              <div class="card-image">
-                <img src="\assets\image\shopping.jfif" alt="Shopping Image">
-              </div><br>
-              <mat-card-content class="card-content" class="d-flex justify-content-center">
-                <div class="form-check">
-                  <input class="form-check-input" name="abc" type="radio" [(ngModel)]="abc" value="shopping" id="shopping">
-                  <label class="form-check-label" for="shopping">
-                    Shopping
-                  </label>
-                </div>
-              </mat-card-content>
-            </mat-card>
-          </div> -->
-          <div class="col-md-3">
-            <mat-card class="card">
-              <div class="card-image">
-                <!-- <a href="travel-link"> -->
-                  <img src="\assets\image\travel.jfif" alt="Travel Image">
-                <!-- </a> -->
-              </div><br>
-              <mat-card-content class="card-content" class="d-flex justify-content-center">
-                <div class="form-check">
-                  <input class="form-check-input" name="abc" type="radio" [(ngModel)]="abc" value="Travel"  id="travel">
-                  <label class="form-check-label" for="travel">
-                    Travel
-                  </label>
-                </div>
-              </mat-card-content>
-            </mat-card>
+
+          <div class="card col-4">
+            <img src="../../assets/image/travels.png" class="card-img img-height pt-2">
+            <div class="card-body">
+              <input type="radio" name="abc" id="travels" [(ngModel)]="abc" value=""><label for="travels" class="label-font pl-2">Travels</label>
+            </div>
           </div>
         </div>
+
         <br>
         <div class="d-flex justify-content-center">
           <button type="submit" class="btn btn-success" (click)="onSelect()">Submit</button>
         </div>
-
-      </div>
-    </div>
+      </div> 
+    </div> 
   </div>

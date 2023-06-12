@@ -1,4 +1,5 @@
 <div class="container">
+  <h1 class="text-center mt-3 ">Transaction History</h1>
   <table class="table table-bordered table-striped table-hover custom-table">
     <thead class="thead-dark">
       <tr>
@@ -6,23 +7,22 @@
         <th class="header-cell">Card Number</th>
         <th class="header-cell">Receiver</th>
         <th class="header-cell">Date</th>
-        <th class="header-cell">Amount &#x20B9;</th>
+        <th class="header-cell">&#x20B9; Amount</th>
         <th class="header-cell">Type</th>
-        <th class="header-cell">Balance &#x20B9;</th>
+        <th class="header-cell">&#x20B9; Balance</th>
       </tr>
-    </thead>
+    </thead> 
     <tbody>
       <tr *ngFor="let transaction of transactions |  paginate: { itemsPerPage: pageSize, currentPage: currentPage }">
         <td>{{ transaction.transactionId }}</td>
         <td>{{ transaction.cardNumber }}</td>
         <td>{{ transaction.receiver }}</td>
         <td>{{ transaction.transactionDate }}</td>
-        <td>{{ transaction.amount }} &#x20B9;</td>
+        <td> &#x20B9; {{ transaction.amount }}</td>
         <td>{{ transaction.transactionType }}</td>
-        <td>{{ transaction.cardBalance }} &#x20B9;</td>
+        <td>&#x20B9; {{ transaction.cardBalance }}</td>
       </tr>
     </tbody>
   </table>
   <pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>
-
 </div>

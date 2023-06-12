@@ -37,3 +37,47 @@
 .card-text {
   margin-bottom: 0;
 }
+
+.test{
+  height: 87vh;
+}
+
+h1{
+  font-weight: 500;
+
+}
+
+.select-edit-1{ 
+  margin-right: 4%;
+  margin-left: 15%;
+}
+
+.select-edit-2{  
+  margin-right: 15%;
+  margin-left: 3%;
+}
+
+.card{
+  width: 30%;
+  height: 40%;
+}
+
+.card img{
+  height: 38%;
+}
+
+.img-height {
+  height: 200px !important; 
+}
+
+/* input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+} */
+
+.label-font{
+  font-size: x-large;
+  font-weight: 500;
+}

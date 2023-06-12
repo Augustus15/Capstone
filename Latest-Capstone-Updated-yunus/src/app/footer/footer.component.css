@@ -1,6 +1,3 @@
-footer {
-  position: fixed;
-  height: 60px;
-  bottom: 0;
-  width: 100%;
+.margins{
+    margin-top: 1.8rem !important;
 }

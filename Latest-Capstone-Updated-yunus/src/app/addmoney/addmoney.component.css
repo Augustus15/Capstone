@@ -18,3 +18,22 @@ button[type="submit"] {
   height: 40px;
   font-size: 16px;
 }
+.desc-edit{
+  font-weight: 300;
+}
+
+h1{
+  font-weight: 500;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-border{
+  border: 1px white solid;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}

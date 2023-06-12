@@ -1,29 +1,27 @@
 <form [formGroup]="loginForm" class="login-form" (ngSubmit)="validateLogin()">
   <mat-card class="login-card">
-    <mat-card-header>
+    
+    <mat-card-header class="d-flex justify-content-center"> 
       <mat-card-title class="login-title">Login</mat-card-title>
     </mat-card-header>
+
     <mat-card-content>
-      <!-- <mat-form-field class="login-input">
-        <input matInput #mb formControlName="mobileNumber" placeholder="Enter Number..." required>
-        <mat-error *ngIf="loginForm.get('mobileNumber').hasError('pattern')">Please enter a valid number!</mat-error>
-        <mat-error *ngIf="loginForm.get('mobileNumber').hasError('minlength')">Minimum 10 digits required</mat-error>
-        <mat-error *ngIf="loginForm.get('mobileNumber').hasError('maxlength')">Maximum 10 digits allowed</mat-error>
-      </mat-form-field> -->
       <mat-form-field class="login-input">
-  <input matInput #email formControlName="email" placeholder="Enter Email..." type="email" required>
-  <mat-error *ngIf="email.required">Please enter an email address!</mat-error>
-  <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Please enter a valid email address!</mat-error>
-</mat-form-field>
+        <input matInput #email formControlName="email" placeholder="Enter Email..." type="email" required>
+        <mat-error *ngIf="email.required">Please enter an email address!</mat-error>
+        <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Please enter a valid email address!</mat-error>
+      </mat-form-field>
 
       <mat-form-field class="login-input">
         <input matInput #password type="password" formControlName="password" placeholder="Enter Password..." required>
         <mat-error *ngIf="password.required">Please enter password!</mat-error>
       </mat-form-field>
     </mat-card-content>
+
     <mat-card-actions>
-      <button mat-raised-button color="primary" class="login-button" [disabled]="loginForm.invalid">Login</button>
+      <button mat-raised-button color="primary" class="login-button mt-1" [disabled]="loginForm.invalid">Login</button>
     </mat-card-actions>
+    
     <div class="forgot-password">
       <a routerLink="/forgot">Forgot Password?</a>
     </div>

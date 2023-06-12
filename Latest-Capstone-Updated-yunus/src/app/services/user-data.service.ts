@@ -12,15 +12,15 @@ export class UserDataService {
 
   getUserProfilebyId(email:string)
   {
-    return this._http.get<UpdateUser>(`http://192.168.1.110:1359/TravelCard/UpdateInfo?email=${email}`);
+    return this._http.get<User>(`http://localhost:1359/TravelCard/UpdateInfo?email=${email}`);
   }
   getUserData()
   {
-    return this._http.get<User[]>('http://192.168.1.110:1359/TravelCard/');
+    return this._http.get<User[]>('http://localhost:1359/TravelCard/');
   }
   updateUserById(inputString:number,user:UpdateUser)
   {
-    return this._http.put(`http://192.168.1.110:1359/TravelCard/Update/UserInfo?customerId=${inputString}`,user);
+    return this._http.put(`http://localhost:1359/TravelCard/Update/UserInfo?customerId=${inputString}`,user);
   }
 
 

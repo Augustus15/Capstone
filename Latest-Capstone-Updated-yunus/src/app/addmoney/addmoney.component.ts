@@ -35,7 +35,6 @@ export class AddmoneyComponent implements OnInit{
       expire: ['', Validators.required],
       cvv: ['', [Validators.required, Validators.pattern('[0-9]{3}')]]
     });
-
   }
 
   addMoney() {
